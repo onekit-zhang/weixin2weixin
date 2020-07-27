@@ -18,10 +18,33 @@ Date.prototype.Format = function(fmt){
     return fmt;
 };
 util.renderName = (name)=>{
-    ;
+        switch(name){
+        case 'appLaunch':
+            return '小程序启动';
+            break;
+        case 'firstRender':
+            return '页面首次渲染';
+            break;
+        case 'route':
+            return '路由性能';
+            break;
+        case 'evaluateScript':
+            return '注入脚本';
+            break;
+    };
 };
 util.renderEntryType = (entryType)=>{
-    ;
+        switch(entryType){
+        case 'navigation':
+            return '路由';
+            break;
+        case 'render':
+            return '渲染';
+            break;
+        case 'script':
+            return '脚本';
+            break;
+    };
 };
 util.renderDuration = (duration)=>{
     return duration?duration + 'ms':'';
