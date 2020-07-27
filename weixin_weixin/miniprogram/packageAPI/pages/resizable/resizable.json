@@ -1,5 +1,5 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "屏幕旋转",
-  "pageOrientation": "auto"
+	"pageOrientation":"auto",
+	"navigationBarTitleText":"屏幕旋转",
+	"usingComponents":{}
 }

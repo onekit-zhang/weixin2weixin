@@ -1,4 +1,4 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "sidebar"
+	"navigationBarTitleText":"sidebar",
+	"usingComponents":{}
 }

@@ -1,3 +1,4 @@
 {
-    "navigationBarTitleText": "Web Socket"
+	"navigationBarTitleText":"Web Socket",
+	"usingComponents":{}
 }

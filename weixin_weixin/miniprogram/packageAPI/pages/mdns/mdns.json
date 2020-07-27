@@ -1,5 +1,4 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "mDNS"
-
+	"navigationBarTitleText":"mDNS",
+	"usingComponents":{}
 }

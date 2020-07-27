@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "iBeacon"
+	"navigationBarTitleText":"iBeacon",
+	"usingComponents":{}
 }

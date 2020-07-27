@@ -1,5 +1,4 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "性能数据"
-
+	"navigationBarTitleText":"性能数据",
+	"usingComponents":{}
 }
