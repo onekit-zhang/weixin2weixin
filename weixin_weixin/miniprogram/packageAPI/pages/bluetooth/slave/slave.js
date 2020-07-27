@@ -3,7 +3,7 @@ const serviceId = 'D0611E78-BBB4-4591-A5F8-487910AE4366';
 const characteristicId = '8667556C-9A37-4C91-84ED-54EE27D90049';
 function ab2hex(buffer){
     var hexArr = Array.prototype.map.call(new Uint8Array(buffer),function(bit){
-        return '00' + bit.toString(16).slice(-2);
+        return ('00' + bit.toString(16)).slice(-2);
     });
     return hexArr.join('');
 };
