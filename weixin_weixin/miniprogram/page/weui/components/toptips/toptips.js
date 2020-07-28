@@ -54,13 +54,9 @@ Component({
         },
         _showToptips:function(newVal){
             if(newVal && this.data.delay){
-                setTimeout(()=>{
-                    this.setData({
-                        show:false
-                    },()=>{
-                        this.triggerEvent('hide',{},{});
-                    });
-                },this.data.delay);
+                setTimeout(()=>{this.setData({
+                    show:false
+                },()=>{this.triggerEvent('hide',{},{})})},this.data.delay);
             }
             this.setData({
                 show:newVal

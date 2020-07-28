@@ -91,7 +91,7 @@ Component({
             ];
             var temp = 0;
             for(var i = 0;i < length;i++){
-                _heightRecords[i] = temp + _contentHeight[i] || 0;
+                _heightRecords[i] = temp + (_contentHeight[i] || 0);
                 temp = _heightRecords[i];
             };
             this.data._heightRecords = _heightRecords;
@@ -125,7 +125,7 @@ Component({
             var index = 0;
             if(scrollTop >= _heightRecords[0]){
                 for(var i = 1;i < length;i++){
-                    if(scrollTop >= _heightRecords[i - 1] && scrollTop < _heightRecords[i]){
+                    if((scrollTop >= _heightRecords[i - 1]) && (scrollTop < _heightRecords[i])){
                         index = i;
                         break;
                     }

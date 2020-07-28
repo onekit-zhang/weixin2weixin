@@ -14,9 +14,7 @@ const color = [
     'rgb(0, 255, 0)',
     '#0000FF'
 ];
-const getRandom = (max,min)=>{
-    Math.floor(Math.random() * max - min + min);
-};
+const getRandom = (max,min)=>{Math.floor((Math.random() * (max - min)) + min)};
 const mockData = (num,message)=>{
     const data = [
     ];

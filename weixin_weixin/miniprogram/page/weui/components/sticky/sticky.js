@@ -24,7 +24,7 @@ module.exports = (function(modules){
         }
     };
     __webpack_require__.r = function(exports){
-        if(typeof Symbol !== 'undefined' && Symbol.toStringTag){
+        if((typeof Symbol !== 'undefined') && Symbol.toStringTag){
             Object.defineProperty(exports,Symbol.toStringTag,{
                 value:'Module'
             });
@@ -36,14 +36,14 @@ module.exports = (function(modules){
     __webpack_require__.t = function(value,mode){
         if(mode & 1)value = __webpack_require__(value)
         if(mode & 8)return value
-        if(mode & 4 && typeof value === 'object' && value && value.__esModule)return value
+        if((((mode & 4) && (typeof value === 'object')) && value) && value.__esModule)return value
         var ns = Object.create(null);
         __webpack_require__.r(ns);
         Object.defineProperty(ns,'default',{
             enumerable:true,
             value:value
         });
-        if(mode & 2 && typeof value != 'string')for(var key in value)__webpack_require__.d(ns,key,function(key){
+        if((mode & 2) && (typeof value != 'string'))for(var key in value)__webpack_require__.d(ns,key,function(key){
     return value[key];
 }.bind(null,key))
         return ns;
@@ -106,7 +106,7 @@ module.exports = (function(modules){
                     newVal?this.disconnectObserver():this.initObserver();
                 },
                 container:function(newVal){
-                    if(typeof newVal !== 'function' || !this.data.height)return
+                    if((typeof newVal !== 'function') || !this.data.height)return
                     this.observerContainer();
                 }
             },
@@ -184,7 +184,7 @@ module.exports = (function(modules){
                                 initialRatio:1
                             });
                             containerObserver.relativeToViewport({
-                                top:_containerHeight - height - offsetTop - _relativeTop
+                                top:((_containerHeight - height) - offsetTop) - _relativeTop
                             });
                             containerObserver.observe(target,function(res){
                                 if(_this3.data.disabled)return
@@ -198,7 +198,7 @@ module.exports = (function(modules){
                 },
                 setFixed:function(top){
                     var _data2 = this.data,height = _data2.height,_containerHeight = _data2._containerHeight,_relativeTop = _data2._relativeTop,offsetTop = _data2.offsetTop;
-                    var fixed = _containerHeight && height?top >= height + offsetTop + _relativeTop - _containerHeight && top < offsetTop:top < offsetTop;
+                    var fixed = _containerHeight && height?(top >= (((height + offsetTop) + _relativeTop) - _containerHeight)) && (top < offsetTop):top < offsetTop;
                     this.triggerEvent('scroll',{
                         scrollTop:top,
                         isFixed:fixed
@@ -231,7 +231,7 @@ module.exports = (function(modules){
                     var _this2 = this;
                     return new Promise(function(resolve,reject){
                         _this2.createSelectorQuery().selectAll(selector).boundingClientRect(function(rects){
-    if(rects && rects.lenght > 0){
+    if(rects && (rects.lenght > 0)){
         resolve(rects);
     } else {
         reject(new Error("can not find selector: " + selector));

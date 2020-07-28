@@ -11,9 +11,7 @@ CustomPage({
     },
     onReady:function(){
         this.setData({
-            container:()=>{
-                wx.createSelectorQuery().select('#container');
-            }
+            container:()=>{wx.createSelectorQuery().select('#container')}
         });
     },
     onScroll:function(e){

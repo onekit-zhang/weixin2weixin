@@ -53,9 +53,7 @@ App({
     },
     onThemeChange:function({theme}){
         this.globalData.theme = theme;
-        themeListeners.forEach((listener)=>{
-            listener(theme);
-        });
+        themeListeners.forEach((listener)=>{listener(theme)});
     },
     watchThemeChange:function(listener){
         if(themeListeners.indexOf(listener) < 0){

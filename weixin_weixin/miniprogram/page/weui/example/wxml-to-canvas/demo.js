@@ -1,5 +1,4 @@
-const wxml = (url)=>{
-    `<view class="container">
+const wxml = (url)=>{`<view class="container">
   <image class="img" mode="aspectFit" src="${url}"></image>
   <text class="title">
     微信开放社区简介（视频）
@@ -8,8 +7,7 @@ const wxml = (url)=>{
     微信开放社区，是一个为使用者提供交流、服务的平台。
   </text>
 </view>
-`;
-};
+`};
 const style = {
     img:{
         width:200,

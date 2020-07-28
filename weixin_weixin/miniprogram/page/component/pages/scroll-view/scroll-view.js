@@ -107,7 +107,7 @@ Page({
             if(order[i] === this.data.toView){
                 this.setData({
                     toView:order[i + 1],
-                    scrollTop:i + 1 * 200
+                    scrollTop:(i + 1) * 200
                 });
                 break;
             }

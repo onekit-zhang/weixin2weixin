@@ -133,7 +133,7 @@ CustomPage({
                 name:'idcard',
                 rules:{
                     validator:function(rule,value,param,modeels){
-                        if(!value || value.length !== 18){
+                        if(!value || (value.length !== 18)){
                             return 'idcard格式不正确';
                         }
                     }

@@ -1,7 +1,7 @@
 const example = {};
 example.rotate = function(context){
     context.beginPath();
-    context.rotate(10 * Math.PI / 180);
+    context.rotate((10 * Math.PI) / 180);
     context.rect(225,75,20,10);
     context.fill();
 };
@@ -169,7 +169,7 @@ example.setFillStyle = function(context){
 ].forEach(function(item,index){
         context.setFillStyle(item);
         context.beginPath();
-        context.rect(0 + 75 * index,0,50,50);
+        context.rect(0 + (75 * index),0,50,50);
         context.fill();
     });
 };
@@ -182,7 +182,7 @@ example.setStrokeStyle = function(context){
 ].forEach(function(item,index){
         context.setStrokeStyle(item);
         context.beginPath();
-        context.rect(0 + 75 * index,0,50,50);
+        context.rect(0 + (75 * index),0,50,50);
         context.stroke();
     });
 };
@@ -195,7 +195,7 @@ example.setGlobalAlpha = function(context){
 ].forEach(function(item,index){
         context.setGlobalAlpha(item);
         context.beginPath();
-        context.rect(0 + 75 * index,0,50,50);
+        context.rect(0 + (75 * index),0,50,50);
         context.fill();
     });
 };
@@ -213,7 +213,7 @@ example.setFontSize = function(context){
     40
 ].forEach(function(item,index){
         context.setFontSize(item);
-        context.fillText('Hello, world',20,20 + 40 * index);
+        context.fillText('Hello, world',20,20 + (40 * index));
     });
 };
 example.setLineCap = function(context){
@@ -225,8 +225,8 @@ example.setLineCap = function(context){
 ].forEach(function(item,index){
         context.beginPath();
         context.setLineCap(item);
-        context.moveTo(20,20 + 20 * index);
-        context.lineTo(100,20 + 20 * index);
+        context.moveTo(20,20 + (20 * index));
+        context.lineTo(100,20 + (20 * index));
         context.stroke();
     });
 };
@@ -239,9 +239,9 @@ example.setLineJoin = function(context){
 ].forEach(function(item,index){
         context.beginPath();
         context.setLineJoin(item);
-        context.moveTo(20 + 80 * index,20);
-        context.lineTo(100 + 80 * index,50);
-        context.lineTo(20 + 80 * index,100);
+        context.moveTo(20 + (80 * index),20);
+        context.lineTo(100 + (80 * index),50);
+        context.lineTo(20 + (80 * index),100);
         context.stroke();
     });
 };
@@ -255,8 +255,8 @@ example.setLineWidth = function(context){
 ].forEach(function(item,index){
         context.beginPath();
         context.setLineWidth(item);
-        context.moveTo(20,20 + 20 * index);
-        context.lineTo(100,20 + 20 * index);
+        context.moveTo(20,20 + (20 * index));
+        context.lineTo(100,20 + (20 * index));
         context.stroke();
     });
 };
@@ -271,9 +271,9 @@ example.setMiterLimit = function(context){
 ].forEach(function(item,index){
         context.beginPath();
         context.setMiterLimit(item);
-        context.moveTo(20 + 80 * index,20);
-        context.lineTo(100 + 80 * index,50);
-        context.lineTo(20 + 80 * index,100);
+        context.moveTo(20 + (80 * index),20);
+        context.lineTo(100 + (80 * index),50);
+        context.lineTo(20 + (80 * index),100);
         context.stroke();
     });
 };

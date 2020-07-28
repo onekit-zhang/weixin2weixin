@@ -24,7 +24,7 @@ module.exports = (function(modules){
         }
     };
     __webpack_require__.r = function(exports){
-        if(typeof Symbol !== 'undefined' && Symbol.toStringTag){
+        if((typeof Symbol !== 'undefined') && Symbol.toStringTag){
             Object.defineProperty(exports,Symbol.toStringTag,{
                 value:'Module'
             });
@@ -36,14 +36,14 @@ module.exports = (function(modules){
     __webpack_require__.t = function(value,mode){
         if(mode & 1)value = __webpack_require__(value)
         if(mode & 8)return value
-        if(mode & 4 && typeof value === 'object' && value && value.__esModule)return value
+        if((((mode & 4) && (typeof value === 'object')) && value) && value.__esModule)return value
         var ns = Object.create(null);
         __webpack_require__.r(ns);
         Object.defineProperty(ns,'default',{
             enumerable:true,
             value:value
         });
-        if(mode & 2 && typeof value != 'string')for(var key in value)__webpack_require__.d(ns,key,function(key){
+        if((mode & 2) && (typeof value != 'string'))for(var key in value)__webpack_require__.d(ns,key,function(key){
     return value[key];
 }.bind(null,key))
         return ns;
@@ -66,10 +66,10 @@ module.exports = (function(modules){
     12:function(module,exports,__webpack_require__){
         "use strict"
 ;
-        var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol"?function(obj){
+        var _typeof = (typeof Symbol === "function") && (typeof Symbol.iterator === "symbol")?function(obj){
             return typeof obj;
         }:function(obj){
-            return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype?"symbol":typeof obj;
+            return ((obj && (typeof Symbol === "function")) && (obj.constructor === Symbol)) && (obj !== Symbol.prototype)?"symbol":typeof obj;
         };
         Component({
             properties:{
@@ -158,7 +158,7 @@ module.exports = (function(modules){
                     classList.push('weui-col-' + this.data.span);
                     classList.push('weui-col-offset-' + this.data.offset);
                     if(this.data.gutter){
-                        paddingLeft = this.data.gutter / 2 + 'px';
+                        paddingLeft = (this.data.gutter / 2) + 'px';
                         paddingRight = paddingLeft;
                     }
                     if(this.data.push !== -1){
@@ -179,7 +179,7 @@ module.exports = (function(modules){
                 updateGutter:function(){
                     var paddingLeft = void0,paddingRight = 0;
                     if(this.data.gutter){
-                        paddingLeft = this.data.gutter / 2 + 'px';
+                        paddingLeft = (this.data.gutter / 2) + 'px';
                         paddingRight = paddingLeft;
                     }
                     this.setData({
@@ -188,11 +188,11 @@ module.exports = (function(modules){
                     });
                 },
                 screenSizeSet:function(screen,classList){
-                    if(typeof this.data[screen] === 'number' && this.data[screen] !== -1){
-                        classList.push('weui-col-' + screen + '-' + this.data[screen]);
+                    if((typeof this.data[screen] === 'number') && (this.data[screen] !== -1)){
+                        classList.push((('weui-col-' + screen) + '-') + this.data[screen]);
                     } else if(_typeof(this.data[screen]) === 'object'){
-                        typeof this.data[screen].offset === 'number' && classList.push('weui-col-' + screen + '-offset-' + this.data[screen].offset);
-                        typeof this.data[screen].span === 'number' && classList.push('weui-col-' + screen + '-' + this.data[screen].span);
+                        (typeof this.data[screen].offset === 'number') && classList.push((('weui-col-' + screen) + '-offset-') + this.data[screen].offset);
+                        (typeof this.data[screen].span === 'number') && classList.push((('weui-col-' + screen) + '-') + this.data[screen].span);
                     }
                 }
             }

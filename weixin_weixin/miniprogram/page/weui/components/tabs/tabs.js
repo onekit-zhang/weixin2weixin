@@ -68,7 +68,7 @@ Component({
             if(len === 0)return
             var currentView = _activeTab - 1;
             if(currentView < 0)currentView = 0
-            if(currentView > len - 1)currentView = len - 1
+            if(currentView > (len - 1))currentView = len - 1
             this.setData({
                 currentView:currentView
             });

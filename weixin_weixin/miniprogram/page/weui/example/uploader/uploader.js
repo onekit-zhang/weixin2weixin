@@ -48,11 +48,7 @@ CustomPage({
     },
     uplaodFile:function(files){
         console.log('upload files',files);
-        return new Promise((resolve,reject)=>{
-            setTimeout(()=>{
-                reject('some error');
-            },1000);
-        });
+        return new Promise((resolve,reject)=>{setTimeout(()=>{reject('some error')},1000)});
     },
     uploadError:function(e){
         console.log('upload error',e.detail);

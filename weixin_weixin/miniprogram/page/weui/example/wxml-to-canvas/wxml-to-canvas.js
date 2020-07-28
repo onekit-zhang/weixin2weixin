@@ -38,12 +38,10 @@ Page({
     },
     extraImage:function(){
         const p2 = this.widget.canvasToTempFilePath();
-        p2.then((res)=>{
-            this.setData({
-                src:res.tempFilePath,
-                width:this.container.layoutBox.width,
-                height:this.container.layoutBox.height
-            });
-        });
+        p2.then((res)=>{this.setData({
+            src:res.tempFilePath,
+            width:this.container.layoutBox.width,
+            height:this.container.layoutBox.height
+        })});
     }
 });

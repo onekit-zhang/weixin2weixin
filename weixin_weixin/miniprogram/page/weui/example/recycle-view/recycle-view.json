@@ -1,7 +1,7 @@
 {
 	"navigationBarTitleText":"recycle-view",
 	"usingComponents":{
-		"recycle-item":"miniprogram-recycle-view/recycle-item",
-		"recycle-view":"miniprogram-recycle-view/recycle-view"
+		"recycle-item":"./miniprogram-recycle-view/recycle-item",
+		"recycle-view":"./miniprogram-recycle-view/recycle-view"
 	}
 }

@@ -28,7 +28,7 @@ CustomPage({
         const system = wx.getSystemInfoSync();
         var isIOS = system.platform === 'ios';
         this.safeHeight = system.screenHeight - system.safeArea.bottom;
-        const layoutHeight = wx.getSystemInfoSync().windowHeight - this.safeHeight / 2;
+        const layoutHeight = wx.getSystemInfoSync().windowHeight - (this.safeHeight / 2);
         this.setData({
             isIOS:isIOS,
             safeHeight:this.safeHeight,
@@ -102,7 +102,7 @@ CustomPage({
     insertEmoji:function(evt){
         const emotionName = evt.detail.emotionName;
         const {cursor,comment} = this.data;
-        const newComment = comment.slice(0,cursor) + emotionName + comment.slice(cursor);
+        const newComment = (comment.slice(0,cursor) + emotionName) + comment.slice(cursor);
         this.setData({
             comment:newComment,
             cursor:cursor + emotionName.length
@@ -141,7 +141,7 @@ CustomPage({
             const left = emojiLen - rawName.length;
             if(this.emojiNames.indexOf(rawName) >= 0){
                 const replace = str.replace(rawName,'');
-                result = comment.slice(0,startPos) + replace + comment.slice(pos);
+                result = (comment.slice(0,startPos) + replace) + comment.slice(pos);
                 cursor = startPos + left;
             }
         } else {

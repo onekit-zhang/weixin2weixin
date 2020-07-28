@@ -18,24 +18,20 @@ CustomPage({
     },
     search:function(value){
         return new Promise((resolve,reject)=>{
-            if(this.data.i % 2 === 0){
-                setTimeout(()=>{
-                    resolve([
-                        {
-                            text:'搜索结果',
-                            value:1
-                        },
-                        {
-                            text:'搜索结果2',
-                            value:2
-                        }
-                    ]);
-                },200);
+            if((this.data.i % 2) === 0){
+                setTimeout(()=>{resolve([
+                    {
+                        text:'搜索结果',
+                        value:1
+                    },
+                    {
+                        text:'搜索结果2',
+                        value:2
+                    }
+                ])},200);
             } else {
-                setTimeout(()=>{
-                    resolve([
-                    ]);
-                },200);
+                setTimeout(()=>{resolve([
+                ])},200);
             }
             this.setData({
                 i:this.data.i + 1

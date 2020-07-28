@@ -35,20 +35,18 @@ Page({
                 console.log('openBluetoothAdapter success',res);
                 this.startBluetoothDevicesDiscovery();
             },
-            fail:(res)=>{
-                if(res.errCode === 10001){
-                    wx.showModal({
-                        title:'错误',
-                        content:'未找到蓝牙设备, 请打开蓝牙后重试。',
-                        showCancel:false
-                    });
-                    wx.onBluetoothAdapterStateChange(function(res){
-                        if(res && res.available){
-                            this.startBluetoothDevicesDiscovery();
-                        }
-                    });
-                }
-            }
+            fail:(res)=>{if(res.errCode === 10001){
+                wx.showModal({
+                    title:'错误',
+                    content:'未找到蓝牙设备, 请打开蓝牙后重试。',
+                    showCancel:false
+                });
+                wx.onBluetoothAdapterStateChange(function(res){
+                    if(res && res.available){
+                        this.startBluetoothDevicesDiscovery();
+                    }
+                });
+            }}
         });
     },
     getBluetoothAdapterState:function(){
@@ -78,28 +76,24 @@ Page({
     },
     stopBluetoothDevicesDiscovery:function(){
         wx.stopBluetoothDevicesDiscovery({
-            complete:()=>{
-                this._discoveryStarted = false;
-            }
+            complete:()=>{this._discoveryStarted = false}
         });
     },
     onBluetoothDeviceFound:function(){
-        wx.onBluetoothDeviceFound((res)=>{
-            res.devices.forEach((device)=>{
-                if(!device.name && !device.localName){
-                    return;
-                }
-                const foundDevices = this.data.devices;
-                const idx = inArray(foundDevices,'deviceId',device.deviceId);
-                const data = {};
-                if(idx === -1){
-                    data[`devices[${foundDevices.length}]`] = device;
-                } else {
-                    data[`devices[${idx}]`] = device;
-                }
-                this.setData(data);
-            });
-        });
+        wx.onBluetoothDeviceFound((res)=>{res.devices.forEach((device)=>{
+            if(!device.name && !device.localName){
+                return;
+            }
+            const foundDevices = this.data.devices;
+            const idx = inArray(foundDevices,'deviceId',device.deviceId);
+            const data = {};
+            if(idx === -1){
+                data[`devices[${foundDevices.length}]`] = device;
+            } else {
+                data[`devices[${idx}]`] = device;
+            }
+            this.setData(data);
+        })});
     },
     createBLEConnection:function(e){
         const ds = e.currentTarget.dataset;
@@ -141,14 +135,12 @@ Page({
     getBLEDeviceServices:function(deviceId){
         wx.getBLEDeviceServices({
             deviceId:deviceId,
-            success:(res)=>{
-                for(var i = 0;i < res.services.length;i++){
-                    if(res.services[i].isPrimary){
-                        this.getBLEDeviceCharacteristics(deviceId,res.services[i].uuid);
-                        return;
-                    }
-                };
-            }
+            success:(res)=>{for(var i = 0;i < res.services.length;i++){
+                if(res.services[i].isPrimary){
+                    this.getBLEDeviceCharacteristics(deviceId,res.services[i].uuid);
+                    return;
+                }
+            }}
         });
     },
     getBLEDeviceCharacteristics:function(deviceId,serviceId){
@@ -213,7 +205,7 @@ Page({
     writeBLECharacteristicValue:function(){
         const buffer = new ArrayBuffer(1);
         const dataView = new DataView(buffer);
-        dataView.setUint8(0,Math.random() * 19 | 0);
+        dataView.setUint8(0,(Math.random() * 19) | 0);
         wx.writeBLECharacteristicValue({
             deviceId:this._deviceId,
             serviceId:this._serviceId,

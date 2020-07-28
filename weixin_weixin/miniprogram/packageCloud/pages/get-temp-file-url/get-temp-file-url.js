@@ -42,14 +42,10 @@ Page({
                     });
                 }
             },
-            fail:(err)=>{
-                console.error('[换取临时链接] 失败：',err);
-            },
-            complete:()=>{
-                self.setData({
-                    loading:false
-                });
-            }
+            fail:(err)=>{console.error('[换取临时链接] 失败：',err)},
+            complete:()=>{self.setData({
+                loading:false
+            })}
         });
     }
 });

@@ -13,17 +13,17 @@ const throttle = function(func,wait,options){
     };
     return function(){
         const now = Date.now();
-        if(!previous && options.leading === false)previous = now
-        const remaining = wait - now - previous;
+        if(!previous && (options.leading === false))previous = now
+        const remaining = wait - (now - previous);
         context = this;
         args = arguments;
-        if(remaining <= 0 || remaining > wait){
+        if((remaining <= 0) || (remaining > wait)){
             clearTimeout(timeout);
             timeout = null;
             previous = now;
             result = func.apply(context,args);
             if(!timeout)context = args = null
-        } else if(!timeout && options.trailing !== false){
+        } else if(!timeout && (options.trailing !== false)){
             timeout = setTimeout(later,remaining);
         }
         return result;
@@ -100,7 +100,7 @@ Component({
         _scrollTo:function(e){
             const data = this.data;
             const clientY = e.changedTouches[0].clientY;
-            const index = Math.floor(clientY - data._anchorTop / data._anchorItemH);
+            const index = Math.floor((clientY - data._anchorTop) / data._anchorItemH);
             const current = data.alphabet[index];
             this.setData({
                 current:current,
@@ -146,8 +146,8 @@ Component({
             if(scrollTop < _tops[0]){
                 current = alphabet[0];
             } else {
-                for(var i = 0,len = _tops.length;i < len - 1;i++){
-                    if(scrollTop >= _tops[i] && scrollTop < _tops[i + 1]){
+                for(var i = 0,len = _tops.length;i < (len - 1);i++){
+                    if((scrollTop >= _tops[i]) && (scrollTop < _tops[i + 1])){
                         current = alphabet[i];
                     }
                 }

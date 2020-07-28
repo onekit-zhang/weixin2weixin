@@ -24,7 +24,7 @@ module.exports = (function(modules){
         }
     };
     __webpack_require__.r = function(exports){
-        if(typeof Symbol !== 'undefined' && Symbol.toStringTag){
+        if((typeof Symbol !== 'undefined') && Symbol.toStringTag){
             Object.defineProperty(exports,Symbol.toStringTag,{
                 value:'Module'
             });
@@ -36,14 +36,14 @@ module.exports = (function(modules){
     __webpack_require__.t = function(value,mode){
         if(mode & 1)value = __webpack_require__(value)
         if(mode & 8)return value
-        if(mode & 4 && typeof value === 'object' && value && value.__esModule)return value
+        if((((mode & 4) && (typeof value === 'object')) && value) && value.__esModule)return value
         var ns = Object.create(null);
         __webpack_require__.r(ns);
         Object.defineProperty(ns,'default',{
             enumerable:true,
             value:value
         });
-        if(mode & 2 && typeof value != 'string')for(var key in value)__webpack_require__.d(ns,key,function(key){
+        if((mode & 2) && (typeof value != 'string'))for(var key in value)__webpack_require__.d(ns,key,function(key){
     return value[key];
 }.bind(null,key))
         return ns;
@@ -70,7 +70,7 @@ module.exports = (function(modules){
             value:true
         });
         exports.diff = function(old,newVal){
-            if(!old && newVal || old && !newVal)return true
+            if((!old && newVal) || (old && !newVal))return true
             for(var k in newVal){
                     if(old[k] !== newVal[k])return true
                 };
@@ -258,8 +258,8 @@ module.exports = (function(modules){
                 },
                 validateField:function(name,value){
                     var _this3 = this;
-                    var cb = arguments.length > 2 && arguments[2] !== undefined?arguments[2]:function(v){
-                        var error = arguments.length > 1 && arguments[1] !== undefined?arguments[1]:null;
+                    var cb = (arguments.length > 2) && (arguments[2] !== undefined)?arguments[2]:function(v){
+                        var error = (arguments.length > 1) && (arguments[1] !== undefined)?arguments[1]:null;
                     };
                     return this.formValidator.validateField(name,value,function(isValid,errors){
                         _this3._showError(name,errors);
@@ -309,11 +309,11 @@ module.exports = (function(modules){
         var object_1 = __webpack_require__(0);
         var toString = Object.prototype.toString;
         var validateSingleRule = function(rule,value){
-            var param = arguments.length > 2 && arguments[2] !== undefined?arguments[2]:null;
-            var models = arguments.length > 3 && arguments[3] !== undefined?arguments[3]:null;
+            var param = (arguments.length > 2) && (arguments[2] !== undefined)?arguments[2]:null;
+            var models = (arguments.length > 3) && (arguments[3] !== undefined)?arguments[3]:null;
             var message = '';
             for(var ruleKey in rule){
-                    if(ruleKey === 'name' || ruleKey === 'message')continue
+                    if((ruleKey === 'name') || (ruleKey === 'message'))continue
                     var validateMethod = typeof rule.validator !== 'undefined'?rule.validator:validator_1.default[ruleKey];
                     if(typeof validateMethod === 'function'){
                         message = validateMethod(rule,value,param,models);
@@ -370,8 +370,8 @@ module.exports = (function(modules){
             };
             FormValidator.prototype.validateField = function(name,value){
                 var _this2 = this;
-                var cb = arguments.length > 2 && arguments[2] !== undefined?arguments[2]:function(v){
-                    var error = arguments.length > 1 && arguments[1] !== undefined?arguments[1]:null;
+                var cb = (arguments.length > 2) && (arguments[2] !== undefined)?arguments[2]:function(v){
+                    var error = (arguments.length > 1) && (arguments[1] !== undefined)?arguments[1]:null;
                 };
                 return new Promise(function(resolve){
                     _this2._innerValidateField(name,value,function(valid,error){
@@ -392,12 +392,12 @@ module.exports = (function(modules){
                 });
             };
             FormValidator.prototype._innerValidateField = function(name,value){
-                var cb = arguments.length > 2 && arguments[2] !== undefined?arguments[2]:function(v){
-                    var errors = arguments.length > 1 && arguments[1] !== undefined?arguments[1]:null;
+                var cb = (arguments.length > 2) && (arguments[2] !== undefined)?arguments[2]:function(v){
+                    var errors = (arguments.length > 1) && (arguments[1] !== undefined)?arguments[1]:null;
                 };
                 var rules = this.rules[name];
                 if(!rules){
-                    console.warn("[form-validtor] rule name " + name + " not exists.");
+                    console.warn(("[form-validtor] rule name " + name) + " not exists.");
                     cb(true);
                     return;
                 }
@@ -489,7 +489,7 @@ module.exports = (function(modules){
             rangelength:function(r,val){
                 var range = r.range;
                 val = val || '';
-                if(val.length > range[1] || val.length < range[0])return string_1.sprintf(r.message || defaultMessage.rangelength,range[0],range[1])
+                if((val.length > range[1]) || (val.length < range[0]))return string_1.sprintf(r.message || defaultMessage.rangelength,range[0],range[1])
             },
             min:function(r,val){
                 var min = r.min;
@@ -501,7 +501,7 @@ module.exports = (function(modules){
             },
             range:function(r,val){
                 var range = r.range;
-                if(val < range[0] || val > range[1])return string_1.sprintf(r.message || defaultMessage.range,range[0],range[1])
+                if((val < range[0]) || (val > range[1]))return string_1.sprintf(r.message || defaultMessage.range,range[0],range[1])
             },
             mobile:function(r,val){
                 if(r.mobile === false)return
@@ -550,8 +550,8 @@ module.exports = (function(modules){
                 return result;
             }
             i = 1;
-            while(i < length + 1){
-                result = result.replace(new RegExp("%s",""),'{#' + i + '#}');
+            while(i < (length + 1)){
+                result = result.replace(new RegExp("%s",""),('{#' + i) + '#}');
                 i++;
             }
             result.replace('%s','');
@@ -561,7 +561,7 @@ module.exports = (function(modules){
                 if(para === undefined){
                     break;
                 }
-                reg = new RegExp('{#' + i + '#}','g');
+                reg = new RegExp(('{#' + i) + '#}','g');
                 result = result.replace(reg,para);
                 i++;
             }

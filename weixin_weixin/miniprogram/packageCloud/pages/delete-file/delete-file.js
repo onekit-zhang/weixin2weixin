@@ -45,14 +45,10 @@ Page({
                     title:'删除成功'
                 });
             },
-            fail:(err)=>{
-                console.error('[删除文件] 失败：',err);
-            },
-            complete:()=>{
-                self.setData({
-                    loading:false
-                });
-            }
+            fail:(err)=>{console.error('[删除文件] 失败：',err)},
+            complete:()=>{self.setData({
+                loading:false
+            })}
         });
     }
 });

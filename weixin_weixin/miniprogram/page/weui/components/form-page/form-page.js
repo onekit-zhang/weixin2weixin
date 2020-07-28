@@ -24,7 +24,7 @@ module.exports = (function(modules){
         }
     };
     __webpack_require__.r = function(exports){
-        if(typeof Symbol !== 'undefined' && Symbol.toStringTag){
+        if((typeof Symbol !== 'undefined') && Symbol.toStringTag){
             Object.defineProperty(exports,Symbol.toStringTag,{
                 value:'Module'
             });
@@ -36,14 +36,14 @@ module.exports = (function(modules){
     __webpack_require__.t = function(value,mode){
         if(mode & 1)value = __webpack_require__(value)
         if(mode & 8)return value
-        if(mode & 4 && typeof value === 'object' && value && value.__esModule)return value
+        if((((mode & 4) && (typeof value === 'object')) && value) && value.__esModule)return value
         var ns = Object.create(null);
         __webpack_require__.r(ns);
         Object.defineProperty(ns,'default',{
             enumerable:true,
             value:value
         });
-        if(mode & 2 && typeof value != 'string')for(var key in value)__webpack_require__.d(ns,key,function(key){
+        if((mode & 2) && (typeof value != 'string'))for(var key in value)__webpack_require__.d(ns,key,function(key){
     return value[key];
 }.bind(null,key))
         return ns;

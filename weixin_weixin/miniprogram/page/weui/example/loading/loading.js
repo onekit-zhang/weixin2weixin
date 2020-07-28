@@ -12,11 +12,9 @@ CustomPage({
         animated:true
     },
     onShow:function(){
-        this.timer = setInterval(()=>{
-            this.setData({
-                show:!this.data.show
-            });
-        },2000);
+        this.timer = setInterval(()=>{this.setData({
+            show:!this.data.show
+        })},2000);
     },
     close:function(){
         this.setData({

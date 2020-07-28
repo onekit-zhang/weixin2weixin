@@ -27,14 +27,12 @@ Page({
         const EntryList = performance.getEntries();
         const array = [
         ];
-        EntryList.forEach((item)=>{
-            array.push({
-                entryType:util.renderEntryType(item.entryType),
-                name:util.renderName(item.name),
-                duration:util.renderDuration(item.duration),
-                startTime:util.renderStartTime(item.startTime)
-            });
-        });
+        EntryList.forEach((item)=>{array.push({
+            entryType:util.renderEntryType(item.entryType),
+            name:util.renderName(item.name),
+            duration:util.renderDuration(item.duration),
+            startTime:util.renderStartTime(item.startTime)
+        })});
         this.setData({
             array:array
         });

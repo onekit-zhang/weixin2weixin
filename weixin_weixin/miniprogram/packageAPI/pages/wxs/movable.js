@@ -17,9 +17,7 @@ Page({
     onLoad:function(options){
     },
     onReady:function(){
-        setTimeout(()=>{
-            this.setData({});
-        },3000);
+        setTimeout(()=>{this.setData({})},3000);
     },
     taptest:function(){
         this.setData({

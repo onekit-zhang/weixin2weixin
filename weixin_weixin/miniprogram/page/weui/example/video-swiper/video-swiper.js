@@ -18,13 +18,11 @@ CustomPage({
         ]
     },
     onLoad:function(){
-        const videoList = urls.map((item,index)=>{
-            return {
-                id:index,
-                url:item,
-                objectFit:'contain'
-            };
-        });
+        const videoList = urls.map((item,index)=>{return {
+            id:index,
+            url:item,
+            objectFit:'contain'
+        }});
         this.setData({
             videoList:videoList
         });

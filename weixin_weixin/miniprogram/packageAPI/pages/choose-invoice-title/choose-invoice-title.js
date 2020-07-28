@@ -16,20 +16,16 @@ Page({
     },
     chooseInvoiceTitle:function(){
         wx.chooseInvoiceTitle({
-            success:(res)=>{
-                this.setData({
-                    type:res.type,
-                    title:res.title,
-                    taxNumber:res.taxNumber,
-                    companyAddress:res.companyAddress,
-                    telephone:res.telephone,
-                    bankName:res.bankName,
-                    bankAccount:res.bankAccount
-                });
-            },
-            fail:(err)=>{
-                console.error(err);
-            }
+            success:(res)=>{this.setData({
+                type:res.type,
+                title:res.title,
+                taxNumber:res.taxNumber,
+                companyAddress:res.companyAddress,
+                telephone:res.telephone,
+                bankName:res.bankName,
+                bankAccount:res.bankAccount
+            })},
+            fail:(err)=>{console.error(err)}
         });
     }
 });

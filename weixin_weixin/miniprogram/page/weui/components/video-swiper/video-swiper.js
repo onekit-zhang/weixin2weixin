@@ -23,7 +23,7 @@ Component({
             value:[
             ],
             observer:function(){
-                const newVal = arguments.length > 0 && arguments[0] !== undefined?arguments[0]:[
+                const newVal = (arguments.length > 0) && (arguments[0] !== undefined)?arguments[0]:[
                 ];
                 console.log(newVal);
                 this._videoListChanged(newVal);
@@ -84,11 +84,11 @@ Component({
             this.triggerEvent('change',{
                 activeId:curQueue[current].id
             });
-            const direction = diff === 1 || diff === -2?'up':'down';
+            const direction = (diff === 1) || (diff === -2)?'up':'down';
             if(direction === 'up'){
                 console.log(this.data);
                 if(this.data._invalidDown === 0){
-                    const change = _change + 1 % 3;
+                    const change = (_change + 1) % 3;
                     const add = nextQueue.shift();
                     const remove = curQueue[change];
                     if(add){
@@ -110,7 +110,7 @@ Component({
                     if(_add){
                         curQueue[_change2] = _add;
                         nextQueue.unshift(_remove);
-                        this.data._change = _change2 - 1 + 3 % 3;
+                        this.data._change = ((_change2 - 1) + 3) % 3;
                     } else {
                         this.data._invalidDown += 1;
                     }
@@ -119,10 +119,10 @@ Component({
                 }
             }
             var circular = true;
-            if(nextQueue.length === 0 && current !== 0){
+            if((nextQueue.length === 0) && (current !== 0)){
                 circular = false;
             }
-            if(prevQueue.length === 0 && current !== 2){
+            if((prevQueue.length === 0) && (current !== 2)){
                 circular = false;
             }
             this.setData({
@@ -160,7 +160,7 @@ Component({
             this.trigger(e,'loadedmetadata');
         },
         trigger:function(e,type){
-            const ext = arguments.length > 2 && arguments[2] !== undefined?arguments[2]:{};
+            const ext = (arguments.length > 2) && (arguments[2] !== undefined)?arguments[2]:{};
             const detail = e.detail;
             const activeId = e.target.dataset.id;
             this.triggerEvent(type,Object.assign(Object.assign(Object.assign({},detail),{

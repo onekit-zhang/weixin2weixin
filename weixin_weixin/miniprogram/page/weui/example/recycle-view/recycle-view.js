@@ -15,9 +15,7 @@ for(var i = 0;i < newList.length;i++){
         image_url:imgUrlList[count++ % 5]
     };
 };
-const rpx2px = (rpx)=>{
-    rpx / 750 * wx.getSystemInfoSync().windowWidth;
-};
+const rpx2px = (rpx)=>(rpx / 750) * wx.getSystemInfoSync().windowWidth;
 Page({
     onShareAppMessage:function(){
         return {

@@ -24,7 +24,7 @@ module.exports = (function(modules){
         }
     };
     __webpack_require__.r = function(exports){
-        if(typeof Symbol !== 'undefined' && Symbol.toStringTag){
+        if((typeof Symbol !== 'undefined') && Symbol.toStringTag){
             Object.defineProperty(exports,Symbol.toStringTag,{
                 value:'Module'
             });
@@ -36,14 +36,14 @@ module.exports = (function(modules){
     __webpack_require__.t = function(value,mode){
         if(mode & 1)value = __webpack_require__(value)
         if(mode & 8)return value
-        if(mode & 4 && typeof value === 'object' && value && value.__esModule)return value
+        if((((mode & 4) && (typeof value === 'object')) && value) && value.__esModule)return value
         var ns = Object.create(null);
         __webpack_require__.r(ns);
         Object.defineProperty(ns,'default',{
             enumerable:true,
             value:value
         });
-        if(mode & 2 && typeof value != 'string')for(var key in value)__webpack_require__.d(ns,key,function(key){
+        if((mode & 2) && (typeof value != 'string'))for(var key in value)__webpack_require__.d(ns,key,function(key){
     return value[key];
 }.bind(null,key))
         return ns;
@@ -122,31 +122,27 @@ module.exports = (function(modules){
                     const query = wx.createSelectorQuery().in(this);
                     query.select('.left').boundingClientRect((res)=>{
     const btnQuery = wx.createSelectorQuery().in(this);
-    btnQuery.selectAll('.btn').boundingClientRect((rects)=>{
-    this.setData({
-        size:{
-            buttons:rects,
-            button:res,
-            show:data.show,
-            disable:data.disable,
-            throttle:data.throttle,
-            rebounce:data.rebounce
-        }
-    });
-}).exec();
+    btnQuery.selectAll('.btn').boundingClientRect((rects)=>{this.setData({
+    size:{
+        buttons:rects,
+        button:res,
+        show:data.show,
+        disable:data.disable,
+        throttle:data.throttle,
+        rebounce:data.rebounce
+    }
+})}).exec();
 }).exec();
                 },
                 addClassNameForButton:function(){
                     const {buttons,icon} = this.data;
-                    buttons.forEach((btn)=>{
-                        if(icon){
-                            btn.className = '';
-                        } else if(btn.type === 'warn'){
-                            btn.className = 'weui-slideview__btn-group_warn';
-                        } else {
-                            btn.className = 'weui-slideview__btn-group_default';
-                        }
-                    });
+                    buttons.forEach((btn)=>{if(icon){
+                        btn.className = '';
+                    } else if(btn.type === 'warn'){
+                        btn.className = 'weui-slideview__btn-group_warn';
+                    } else {
+                        btn.className = 'weui-slideview__btn-group_default';
+                    }});
                     this.setData({
                         buttons:buttons
                     });

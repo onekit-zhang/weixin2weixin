@@ -20,9 +20,7 @@ Page({
         loading:false
     });
     return openid;
-}).catch((err)=>{
-            console.error(err);
-        });
+}).catch((err)=>{console.error(err)});
     },
     clear:function(){
         this.setData({

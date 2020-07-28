@@ -42,9 +42,7 @@ Page({
         };
         canvas.requestAnimationFrame(renderLoop);
         const img = canvas.createImage();
-        img.onload = ()=>{
-            this._img = img;
-        };
+        img.onload = ()=>{this._img = img};
         img.src = './car.png';
     },
     render:function(canvas,ctx){
