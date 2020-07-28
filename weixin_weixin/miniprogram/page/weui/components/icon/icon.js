@@ -181,8 +181,7 @@ module.exports = (function(modules){
         };
     },
     12:function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         Object.defineProperty(exports,"__esModule",{
             value:true
         });
