@@ -64,8 +64,7 @@ module.exports = (function(modules){
     return __webpack_require__(__webpack_require__.s = 10);
 }({
     10:function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         var _base = _interopRequireDefault(__webpack_require__(11));
         var _icondata = _interopRequireDefault(__webpack_require__(12));
         function _interopRequireDefault(obj){
