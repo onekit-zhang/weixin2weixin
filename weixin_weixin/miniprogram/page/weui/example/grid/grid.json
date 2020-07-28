@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText":"grid",
+	"usingComponents":{
+		"mp-grids":"./../../components/grids/grids"
+	}
+}

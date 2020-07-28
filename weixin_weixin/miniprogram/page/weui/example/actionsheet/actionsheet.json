@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText":"actionsheet",
+	"usingComponents":{
+		"mp-icon":"./../../components/icon/icon",
+		"mp-actionSheet":"./../../components/actionsheet/actionsheet"
+	}
+}

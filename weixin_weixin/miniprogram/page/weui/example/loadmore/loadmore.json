@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText":"loadmore",
+	"usingComponents":{
+		"mp-loading":"./../../components/loading/loading"
+	}
+}

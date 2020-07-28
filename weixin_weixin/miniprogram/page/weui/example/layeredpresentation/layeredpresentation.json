@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText":"分层展现",
+	"usingComponents":{
+		"mp-row":"./../../components/row/index",
+		"mp-col":"./../../components/col/index"
+	}
+}

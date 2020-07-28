@@ -1,0 +1,13 @@
+{
+	"component":true,
+	"navigationBarTitleText":"form",
+	"usingComponents":{
+		"mp-cells":"./../../components/cells/cells",
+		"mp-cell":"./../../components/cell/cell",
+		"mp-toptips":"./../../components/toptips/toptips",
+		"mp-checkbox-group":"./../../components/checkbox-group/checkbox-group",
+		"mp-form-page":"./../../components/form-page/form-page",
+		"mp-checkbox":"./../../components/checkbox/checkbox",
+		"mp-form":"./../../components/form/form"
+	}
+}

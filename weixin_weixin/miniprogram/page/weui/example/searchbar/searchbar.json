@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText":"searchbar",
+	"usingComponents":{
+		"mp-searchbar":"./../../components/searchbar/searchbar"
+	}
+}

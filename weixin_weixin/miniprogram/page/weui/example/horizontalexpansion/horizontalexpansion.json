@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText":"横向拓展",
+	"usingComponents":{
+		"mp-row":"./../../components/row/index",
+		"mp-col":"./../../components/col/index"
+	}
+}

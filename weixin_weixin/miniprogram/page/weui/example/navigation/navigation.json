@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText":"navigation",
+	"usingComponents":{
+		"mp-navigation-bar":"./../../components/navigation-bar/navigation-bar"
+	}
+}

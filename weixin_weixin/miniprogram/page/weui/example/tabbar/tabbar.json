@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText":"tabbar",
+	"usingComponents":{
+		"mp-tabbar":"./../../components/tabbar/tabbar"
+	}
+}
