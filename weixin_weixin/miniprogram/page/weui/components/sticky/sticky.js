@@ -64,8 +64,7 @@ module.exports = (function(modules){
     return __webpack_require__(__webpack_require__.s = 8);
 }({
     8:function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         var selectQuery = __webpack_require__(9);
         var target = '.weui-sticky';
         Component({
@@ -211,8 +210,7 @@ module.exports = (function(modules){
         });
     },
     9:function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         module.exports = Behavior({
             methods:{
                 getRect:function(selector){

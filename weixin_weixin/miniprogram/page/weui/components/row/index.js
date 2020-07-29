@@ -64,8 +64,7 @@ module.exports = (function(modules){
     return __webpack_require__(__webpack_require__.s = 13);
 }({
     13:function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         Component({
             properties:{},
             relations:{

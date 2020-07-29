@@ -64,8 +64,7 @@ module.exports = (function(modules){
     return __webpack_require__(__webpack_require__.s = 27);
 }({
     27:function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         exports.__esModule = true;
     }
 }));

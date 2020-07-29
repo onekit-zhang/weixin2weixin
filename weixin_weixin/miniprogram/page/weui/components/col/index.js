@@ -64,8 +64,7 @@ module.exports = (function(modules){
     return __webpack_require__(__webpack_require__.s = 12);
 }({
     12:function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         var _typeof = (typeof Symbol === "function") && (typeof Symbol.iterator === "symbol")?function(obj){
             return typeof obj;
         }:function(obj){

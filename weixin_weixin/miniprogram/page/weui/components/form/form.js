@@ -64,8 +64,7 @@ module.exports = (function(modules){
     return __webpack_require__(__webpack_require__.s = 4);
 }([
     function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         Object.defineProperty(exports,"__esModule",{
             value:true
         });
@@ -103,8 +102,7 @@ module.exports = (function(modules){
     null,
     null,
     function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         Object.defineProperty(exports,"__esModule",{
             value:true
         });
@@ -295,8 +293,7 @@ module.exports = (function(modules){
         exports.default = form_validator_1.default;
     },
     function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         function _classCallCheck(instance,Constructor){
             if(!instance instanceof Constructor){
                 throw new TypeError("Cannot call a class as a function");
@@ -451,8 +448,7 @@ module.exports = (function(modules){
         exports.default = FormValidator;
     },
     function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         Object.defineProperty(exports,"__esModule",{
             value:true
         });
@@ -532,8 +528,7 @@ module.exports = (function(modules){
         };
     },
     function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         Object.defineProperty(exports,"__esModule",{
             value:true
         });

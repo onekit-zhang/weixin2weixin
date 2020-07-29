@@ -64,8 +64,7 @@
     return __webpack_require__(__webpack_require__.s = 23);
 }({
     23:function(module,exports,__webpack_require__){
-        "use strict"
-;
+        "use strict";
         Component({
             options:{
                 addGlobalClass:true,
