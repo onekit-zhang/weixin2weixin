@@ -1,7 +1,0 @@
-{
-	"navigationBarTitleText":"自由布局",
-	"usingComponents":{
-		"mp-row":"./../../components/row/index",
-		"mp-col":"./../../components/col/index"
-	}
-}

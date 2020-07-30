@@ -1,7 +1,0 @@
-{
-	"component":true,
-	"navigationBarTitleText":"form-page",
-	"usingComponents":{
-		"mp-form-page":"./../../components/form-page/form-page"
-	}
-}

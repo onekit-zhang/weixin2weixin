@@ -1,6 +1,0 @@
-{
-	"navigationBarTitleText":"tabs",
-	"usingComponents":{
-		"mp-tabs":"./../../components/tabs/tabs"
-	}
-}

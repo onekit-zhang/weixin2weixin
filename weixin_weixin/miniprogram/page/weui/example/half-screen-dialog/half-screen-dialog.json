@@ -1,6 +1,0 @@
-{
-	"navigationBarTitleText":"half-screen-dialog",
-	"usingComponents":{
-		"mp-halfScreenDialog":"./../../components/half-screen-dialog/half-screen-dialog"
-	}
-}

@@ -1,6 +1,0 @@
-{
-	"navigationBarTitleText":"gallery",
-	"usingComponents":{
-		"mp-gallery":"./../../components/gallery/gallery"
-	}
-}

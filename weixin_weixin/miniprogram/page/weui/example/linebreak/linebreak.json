@@ -1,7 +1,0 @@
-{
-	"navigationBarTitleText":"换行排列",
-	"usingComponents":{
-		"mp-row":"./../../components/row/index",
-		"mp-col":"./../../components/col/index"
-	}
-}

@@ -1,6 +1,0 @@
-{
-	"navigationBarTitleText":"wxml-to-canvas",
-	"usingComponents":{
-		"wxml-to-canvas":"./../../../../miniprogram_npm/wxml-to-canvas"
-	}
-}
