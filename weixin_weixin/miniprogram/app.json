@@ -66,6 +66,7 @@
 			}
 		]
 	},
+	"style":"v2",
 	"window":{
 		"backgroundColor":"#f7f7f7",
 		"navigationBarBackgroundColor":"#f7f7f7",

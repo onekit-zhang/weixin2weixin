@@ -11,7 +11,7 @@
     <view class="page-nav-list"><text>运营专区</text></view>
     <view class="page-nav-list"><text>我的</text></view>
   </view>
-  <block wx:for="{{tabs}}" wx:key="title">
+  <block wx:for="{{tabs}}" wx:key='title'>
     <view class="goods-list" bind:tap="handleClick">
       <image src="{{item.img}}" mode="widthFix"></image>
       <view class="item-title">

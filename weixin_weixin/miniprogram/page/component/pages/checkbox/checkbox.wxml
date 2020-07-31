@@ -20,7 +20,7 @@
       <view class="page-section-title">推荐展示样式</view>
       <view class="weui-cells weui-cells_after-title">
         <checkbox-group bindchange="checkboxChange">
-          <label wx:for="{{items}}" wx:key="value" class="weui-cell weui-check__label">
+          <label wx:for="{{items}}" wx:key='value' class="weui-cell weui-check__label">
             <view class="weui-cell__hd">
               <checkbox value="{{item.value}}" checked="{{item.checked}}"></checkbox>
             </view>

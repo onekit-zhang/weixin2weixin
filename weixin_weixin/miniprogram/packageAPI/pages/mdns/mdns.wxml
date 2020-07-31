@@ -13,7 +13,7 @@
         停止搜索 mDNS
       </button>
       <view>
-        <view wx:for="{{serviceList}}" wx:key="index" class="row">
+        <view wx:for="{{serviceList}}" wx:key='index' class="row">
           <text>设备服务名：{{item.serviceName}}</text>
           <text>ip地址：{{item.ip}}:{{item.port}}</text>
           <text>当前服务类型：{{item.serviceType}}</text>

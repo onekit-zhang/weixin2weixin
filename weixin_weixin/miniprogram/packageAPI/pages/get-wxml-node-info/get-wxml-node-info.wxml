@@ -16,7 +16,7 @@
 
     <view class="page-section">
       <view class="metric">
-        <view wx:for="{{ metrics }}" wx:key="key">
+        <view wx:for="{{ metrics }}" wx:key='key'>
           <text class="b">{{ item.key }}</text>
           <text class="span">{{ item.val }}</text>
         </view>

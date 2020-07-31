@@ -8,7 +8,7 @@
   <view class="page-body">
     <view class="page-body-info">
       <scroll-view class="device-list" scroll-y>
-        <view wx:for="{{wifiList}}" wx:key="index" class="item">
+        <view wx:for="{{wifiList}}" wx:key='index' class="item">
           <view class="list">
             <text>{{ item.SSID }}</text>
             <span class="wifi-icon">
